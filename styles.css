@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#upper-container {
+    justify-content: center;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+div {
+    display: flex;
+    text-align: center;
+    height: 100vh;
+}
+
+
+/* header {
+    width: 100%;
+}
+
+h1 {
+    width: 100%;
+}
+
+h2 {
+    width: 100%;
+} */
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black ;
+}
+
