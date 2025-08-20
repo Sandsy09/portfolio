@@ -14,6 +14,10 @@
   transition: all 0.3s ease-in-out;
 }
 
+.hamburger:hover .line {
+  background-color: var(--primary);
+}
+
 .hamburger-active {
   transition: all 0.3s ease-in-out;
   transition-delay: 0.6s;
@@ -56,10 +60,12 @@
 .hover-underline-animation {
   display: inline-block;
   position: relative;
+  transition: ease-in-out 250ms;
 }
 
 .hover-underline-animation:hover {
-    color: var(--accent);
+  color: var(--primary);
+  font-weight: 500;
 }
 
 .hover-underline-animation::after {
@@ -70,7 +76,7 @@
   height: 2px;
   bottom: -3px;
   left: 0;
-  background-color: var(--accent);
+  background-color: var(--primary);
   transition: transform 0.25s ease-out;
 }
 
@@ -87,6 +93,6 @@
 }
 
 .active-link {
-  color: var(--accent);
-  border-bottom: 2px solid var(--accent);
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
 }

@@ -14,11 +14,44 @@
   --background: #0A192F;
   --foreground: #F8F9FA;
   --accent: #64FFDA;
+
   --secondary-accents: #00A8E8;
   --primary-hover: #48CAE4;
   --secondary-text: #212529;
   --secondart-amber: #FFC300;
   --secondary-magenta: #FF4D6D;
+
+  --test-background: hsl(240 10% 3.9%);
+  --test-foreground: hsl(0 0% 98%);
+
+  --primary: hsl(263 70% 60%);
+  --primary-foreground: hsl(0 0% 98%);
+  --primary-glow: hsl(263 70% 70%);
+
+  --secondary: hsl(240 5% 15%);
+  --secondary-foreground: hsl(0 0% 98%);
+
+  --muted: hsl(240 5% 15%);
+  --muted-foreground: hsl(240 5% 65%);
+
+  --test-accent: hsl(217 91% 60%);
+  --accent-foreground: hsl(0 0% 98%);
+
+  --destructive: hsl(0 84.2% 60.2%);
+  --destructive-foreground: hsl(0 0% 98%);
+
+  --border: hsl(240 6% 20%);
+  --input: hsl(240 6% 20%);
+  --ring: hsl(263 70% 60%);
+
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--test-accent));
+  --gradient-bg: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 8% 6%));
+
+  --glass-bg: hsla(216, 65%, 18%, 0.6);
+
+  --glow-primary: 0 0 40px (var(--primary-glow) / 0.3);
+
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ------ HTML and body pre-set styling ------- */
@@ -37,4 +70,8 @@ body {
     text-align: center;
     background-color: var(--background);
     color: var(--foreground);
+}
+
+h4 {
+  color: hsl(216, 65%, 11%)
 }

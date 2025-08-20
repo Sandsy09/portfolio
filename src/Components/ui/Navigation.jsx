@@ -53,12 +53,12 @@ const Navigation = ({ toggleMenu, isMobileMenuActive }) => {
                 }
             </div>
             <div
-                className={`group hamburger z-500 bg-(--background) ${toggleClass}`}
+                className={`hamburger z-500 ${toggleClass}`}
                 onClick={toggleMenu}
             >
-                <span className="line group-hover:bg-(--accent)"></span>
-                <span className="line group-hover:bg-(--accent)"></span>
-                <span className="line group-hover:bg-(--accent)"></span>
+                <span className="line"></span>
+                <span className="line"></span>
+                <span className="line"></span>
             </div>
         </nav>
     )

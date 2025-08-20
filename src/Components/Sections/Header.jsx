@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <>
-            <header className='sticky top-0 left-0 bg-(--background) text-(--foreground) z-50 shadow-md py-3 px-5 md:px-8 font-roboto-mono'>
+            <header className='sticky top-0 left-0 backdrop-blur-sm bg-(--background)/70 text-(--foreground) z-50 shadow-md py-3 px-5 md:px-8 font-roboto-mono'>
                 <div className='container mx-auto px-8'>
                     {/* Desktop Navigation */}
                     <Navigation toggleMenu={toggleMenu} isMobileMenuActive={isMobileMenuActive} />

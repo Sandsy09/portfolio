@@ -29,7 +29,7 @@ const MobileNavigation = ({ toggleMenu, isMobileMenuActive }) => {
     };
 
     return (
-        <div id='mobile-nav' className={`fixed z-100 h-full bg-(--background) text-(--foreground) pt-20 inset-0 md:hidden transition-transform duration-900 ease-in-out ${toggleClass}`}>
+        <div id='mobile-nav' className={`fixed z-100 h-screen bg-(--background) text-(--foreground) pt-20 inset-0 md:hidden transition-transform duration-900 ease-in-out ${toggleClass}`}>
             <div className='flex flex-col mx-auto items-center justify-center gap-10 mt-20'>
                 {
                     navLinks.map((item) => (
