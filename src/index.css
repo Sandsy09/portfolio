@@ -24,9 +24,9 @@
   --test-background: hsl(240 10% 3.9%);
   --test-foreground: hsl(0 0% 98%);
 
-  --primary: hsl(263 70% 60%);
+  --primary: hsl(260, 94%, 74%); /* 263 70% 60% */
   --primary-foreground: hsl(0 0% 98%);
-  --primary-glow: hsl(263 70% 70%);
+  --primary-glow: hsl(260, 94%, 84%);
 
   --secondary: hsl(240 5% 15%);
   --secondary-foreground: hsl(0 0% 98%);
@@ -42,9 +42,9 @@
 
   --border: hsl(240 6% 20%);
   --input: hsl(240 6% 20%);
-  --ring: hsl(263 70% 60%);
+  --ring: hsl(260, 94%, 74%);
 
-  --gradient-primary: linear-gradient(135deg, var(--primary), var(--test-accent));
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--accent));
   --gradient-bg: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 8% 6%));
 
   --glass-bg: hsla(216, 65%, 18%, 0.6);
@@ -72,6 +72,4 @@ body {
     color: var(--foreground);
 }
 
-h4 {
-  color: hsl(216, 65%, 11%)
-}
+/* B1DDF1  91C4F2 61D1C5 */

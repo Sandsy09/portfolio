@@ -2,6 +2,7 @@ import React from 'react';
 
 import Hero from '../Components/Sections/Hero';
 import About from '../Components/Sections/About';
+import Experience from '../Components/Sections/Experience';
 
 const LandingPage = () => {
 
@@ -9,10 +10,8 @@ const LandingPage = () => {
     <main className='flex-col justify-center items-center content-center'>
       <Hero />
       <About />
+      <Experience />
 
-      <div id="experience" className='h-screen bg-amber-300 flex items-center justify-center'>
-        <h2 className='text-3xl font-medium'>Experience</h2>
-      </div>
       <div id="projects" className='h-screen bg-amber-500 flex items-center justify-center'>
         <h2 className='text-3xl font-medium'>Projects</h2>
       </div>

@@ -15,19 +15,19 @@ const About = () => {
                         <p className='mb-3 lg:mb-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis provident reprehenderit, enim ad sit corrupti praesentium architecto quae labore explicabo repellendus corporis adipisci sint alias! Voluptatem non cupiditate rem fuga!</p>
                         <div className='grid grid-cols-2 gap-4'>
                             <div className='mx-auto lg:ml-2'>
-                                <h6 className='font-medium text-(--accent)/70 mb-1'>Data Stack</h6>
+                                <h6 className='font-medium text-(--primary)/70 mb-1'>Data Stack</h6>
                                 <ul className=''>
-                                    <li className='before:content-["◦"] before:text-(--accent)'> Python</li>
-                                    <li className='before:content-["◦"] before:text-(--accent)'> TensorFlow</li>
-                                    <li className='before:content-["◦"] before:text-(--accent)'> PyTorch</li>
+                                    <li className='before:content-["◦"] before:text-(--primary)'> Python</li>
+                                    <li className='before:content-["◦"] before:text-(--primary)'> TensorFlow</li>
+                                    <li className='before:content-["◦"] before:text-(--primary)'> PyTorch</li>
                                 </ul>
                             </div>
                             <div className='mx-auto lg:ml-2'>
-                                <h6 className='font-medium text-(--accent)/70 mb-1'>Web Stack</h6>
+                                <h6 className='font-medium text-(--primary)/70 mb-1'>Web Stack</h6>
                                 <ul className=''>
-                                    <li className='before:content-["◦"] before:text-(--accent)'> JavaScript (ES6+)</li>
-                                    <li className='before:content-["◦"] before:text-(--accent)'> Node.js</li>
-                                    <li className='before:content-["◦"] before:text-(--accent)'> React</li>
+                                    <li className='before:content-["◦"] before:text-(--primary)'> JavaScript (ES6+)</li>
+                                    <li className='before:content-["◦"] before:text-(--primary)'> Node.js</li>
+                                    <li className='before:content-["◦"] before:text-(--primary)'> React</li>
                                 </ul>
                             </div>
                         </div>
