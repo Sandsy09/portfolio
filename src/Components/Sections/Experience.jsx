@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import { Link2 } from 'lucide-react'
 
-import Button from '../ui/Button/Button.component';
-import { BUTTON_TYPE_CLASSES } from '../ui/Button/Button.types';
+import Button from '../ui/Button/button.component';
+import { BUTTON_TYPE_CLASSES } from '../ui/Button/button.types';
 
 const jobHistory = [
     {

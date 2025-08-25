@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from "./Button/Button.component";
-import { BUTTON_TYPE_CLASSES } from "./Button/Button.types";
+import Button from "./Button/button.component";
+import { BUTTON_TYPE_CLASSES } from "./Button/button.types";
 
 import { ExternalLink } from 'lucide-react';
 

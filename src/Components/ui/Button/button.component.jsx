@@ -1,6 +1,6 @@
 import React from 'react'
-import { BaseButton, GhostButton, CategoryButton, JobButton } from './Button.styles'
-import { BUTTON_TYPE_CLASSES } from './Button.types'
+import { BaseButton, GhostButton, CategoryButton, JobButton } from './button.styles'
+import { BUTTON_TYPE_CLASSES } from './button.types'
 
 const getButton = (buttonType = BUTTON_TYPE_CLASSES.base) =>
 ({

@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 
-import { BUTTON_TYPE_CLASSES } from "../ui/Button/Button.types";
-import Button from "../ui/Button/Button.component";
+import Button from "../ui/Button/button.component";
+import { BUTTON_TYPE_CLASSES } from "../ui/Button/button.types";
 
 const Hero = () => {
   return (
