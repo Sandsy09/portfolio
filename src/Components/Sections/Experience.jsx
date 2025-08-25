@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Link2 } from 'lucide-react'
 
 import Button from '../ui/Button/Button.component';
-import { BUTTON_TYPE_CLASSES } from '../ui/Button/button.types';
+import { BUTTON_TYPE_CLASSES } from '../ui/Button/Button.types';
 
 const jobHistory = [
     {
@@ -127,13 +127,13 @@ const Experience = () => {
                                     {selectedJob.jobTitle}
                                     {
                                         selectedJob && selectedJob.companyUrl
-                                        ? <a
-                                            href={selectedJob.companyUrl}
-                                            className='flex justify-center items-center h-[30px] w-[30px]'
-                                        >
-                                            <Link2 size={15} />
-                                        </a>
-                                        : null
+                                            ? <a
+                                                href={selectedJob.companyUrl}
+                                                className='flex justify-center items-center h-[30px] w-[30px]'
+                                            >
+                                                <Link2 size={15} />
+                                            </a>
+                                            : null
                                     }
                                 </h4>
                                 <div className='font-medium font-space-mono text-(--primary) mb-4'>

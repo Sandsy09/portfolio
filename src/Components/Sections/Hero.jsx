@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
 
 import Button from "../ui/Button/Button.component";
-import { BUTTON_TYPE_CLASSES } from "../ui/Button/button.types";
+import { BUTTON_TYPE_CLASSES } from "../ui/Button/Button.types";
 
 const Hero = () => {
   return (
@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="flex justify-evenly mt-12 max-w-[600px] mx-auto">
             <Button buttonType={BUTTON_TYPE_CLASSES.base}>View Projects</Button>
             <Button className='group' buttonType={BUTTON_TYPE_CLASSES.ghost}>
-              View Full CV 
+              View Full CV
               <ArrowRight className='group-hover:translate-x-1 transition-transform' />
             </Button>
           </div>
