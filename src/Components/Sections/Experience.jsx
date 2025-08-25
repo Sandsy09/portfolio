@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { Link2 } from 'lucide-react'
+
 import Button from '../ui/Button/Button.component';
 import { BUTTON_TYPE_CLASSES } from '../ui/Button/button.types';
 
@@ -9,6 +11,7 @@ const jobHistory = [
         startDate: new Date('2020-10-01'),
         endDate: new Date('2021-10-01'),
         company: 'Metro Bank PLC',
+        companyUrl: 'https://www.metrobankonline.co.uk/',
         jobTitle: 'Assistant Store Manager',
         category: 'data',
         jobDescription: [
@@ -23,6 +26,7 @@ const jobHistory = [
         startDate: new Date('2025-01-01'),//.toLocaleDateString("en-GB", {month: 'short', year: 'numeric'}),
         endDate: null,
         company: 'Swift UK Property Maintenance',
+        companyUrl: 'https://www.bristolpropertymaintenance.co.uk/',
         jobTitle: 'React Developer',
         category: 'web',
         jobDescription: [
@@ -37,6 +41,7 @@ const jobHistory = [
         startDate: new Date('2022-10-24'),
         endDate: new Date('2025-04-30'),
         company: 'Metro Bank PLC',
+        companyUrl: 'https://www.metrobankonline.co.uk/',
         jobTitle: 'Junior Data Scientist',
         category: 'data',
         jobDescription: [
@@ -51,6 +56,7 @@ const jobHistory = [
         startDate: new Date('2024-01-01'),
         endDate: null,
         company: 'Freelance',
+        companyUrl: null,
         jobTitle: 'Full Stack Web Developer',
         category: 'web',
         jobDescription: [
@@ -99,7 +105,7 @@ const Experience = () => {
                     <span><Button buttonType={BUTTON_TYPE_CLASSES.category} onClick={() => handleCategorySelection('data')}>Data</Button></span>
                 </div>
                 <div className="flex flex-col lg:flex-row gap-2 lg:gap-4 max-w-9/10 mx-auto">
-                    <aside className='flex lg:flex-col justify-center items-start lg:justify-start lg:w-[270px]'>
+                    <div className='flex lg:flex-col justify-center items-start lg:justify-start lg:w-[270px]'>
                         {
                             filteredJobHistory.map(({ id, company }, i) => {
                                 return (
@@ -113,12 +119,24 @@ const Experience = () => {
                                 )
                             })
                         }
-                    </aside>
+                    </div>
                     <div className="text-(--foreground)/60 text-start">
                         {selectedJob && selectedJob.length !== 0
                             ? <div>
-                                <h4 className='font-bold tracking-wide text-xl text-(--foreground)/90'>{selectedJob.jobTitle}</h4>
-                                <div className='font-medium font-space-mono text-(--primary)'>
+                                <h4 className='flex items-center gap-2 font-bold tracking-wide text-xl text-(--foreground)/90 mb-1'>
+                                    {selectedJob.jobTitle}
+                                    {
+                                        selectedJob && selectedJob.companyUrl
+                                        ? <a
+                                            href={selectedJob.companyUrl}
+                                            className='flex justify-center items-center h-[30px] w-[30px]'
+                                        >
+                                            <Link2 size={15} />
+                                        </a>
+                                        : null
+                                    }
+                                </h4>
+                                <div className='font-medium font-space-mono text-(--primary) mb-4'>
                                     <span>
                                         {selectedJob.startDate.toLocaleDateString("en-GB", { month: 'short', year: 'numeric' })}
                                     </span> -
@@ -130,7 +148,7 @@ const Experience = () => {
                                         }
                                     </span>
                                 </div>
-                                <ul>
+                                <ul className='flex flex-col space-y-1'>
                                     {
                                         selectedJob.jobDescription.map((desc, i) => {
                                             return (

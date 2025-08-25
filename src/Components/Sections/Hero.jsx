@@ -15,7 +15,7 @@ const Hero = () => {
             <p className="font-roboto text-md text-start text-(--foreground)/50 max-w-xl">I&#39;m a Data Science enthusiast with a passion for uncovering business solutions through data and providing visual insights for analytics. Alongside data I love building and occasionally designing stunning and responsive web solutions. </p>
           </div>
           <div className="flex justify-evenly mt-12 max-w-[600px] mx-auto">
-            <Button buttonType={BUTTON_TYPE_CLASSES.base}>View Products</Button>
+            <Button buttonType={BUTTON_TYPE_CLASSES.base}>View Projects</Button>
             <Button className='group' buttonType={BUTTON_TYPE_CLASSES.ghost}>
               View Full CV 
               <ArrowRight className='group-hover:translate-x-1 transition-transform' />
