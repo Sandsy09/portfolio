@@ -25,6 +25,7 @@
   --test-foreground: hsl(0 0% 98%);
 
   --primary: hsl(260, 94%, 74%); /* 263 70% 60% */
+  --primary-light: hsla(260, 94%, 74%, 0.3);
   --primary-foreground: hsl(0 0% 98%);
   --primary-glow: hsl(260, 94%, 84%);
 
@@ -73,3 +74,7 @@ body {
 }
 
 /* B1DDF1  91C4F2 61D1C5 */
+
+h1 {
+  color: hsla(260, 94%, 74%, 0.3);
+}

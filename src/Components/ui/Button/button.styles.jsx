@@ -13,7 +13,7 @@ export const BaseButton = styled.button`
     transition-duration: 300ms;
 
     &:hover {
-        cursor:pointer;
+        cursor: pointer;
         scale: 105% 105%;
         box-shadow: 0px 0px 8px var(--primary-glow);
     }
@@ -66,5 +66,19 @@ export const JobButton = styled(CategoryButton)`
     &:focus {
         border-bottom: unset;
         border-left: 2px solid var(--primary);
+    }
+`
+
+export const DangerButton = styled(BaseButton)`
+    background: var(--destructive);
+    color: var(--destructive-foreground);
+    border: 1px solid var(--destructive);
+    min-width: unset;
+    padding: 0.5rem 1rem;
+
+    &:hover {
+        cursor: pointer;
+        scale: 102% 102%;
+        box-shadow: 0px 0px 10px var(--destructive);
     }
 `

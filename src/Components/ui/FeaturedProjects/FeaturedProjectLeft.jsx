@@ -1,11 +1,11 @@
 import React from 'react'
-import Button from "./Button/button.component";
-import { BUTTON_TYPE_CLASSES } from "./Button/button.types";
+import Button from "../Button/button.component";
+import { BUTTON_TYPE_CLASSES } from "../Button/button.types";
 
 import { ExternalLink } from 'lucide-react';
 
 
-const FeaturedProjectLeft = ({ content }) => {
+const FeaturedProjectLeft = ({ content, handleProjectClick }) => {
 
     return (
         <div className='relative my-24 max-w-[1000px] mx-auto'>
@@ -13,7 +13,7 @@ const FeaturedProjectLeft = ({ content }) => {
                 <div className="peer absolute z-1 top-0 left-0 w-full h-full flex items-center justify-center bg-(--primary)/10 backdrop-blur-[2px] opacity-0 hover:opacity-100 transition-all duration-300 over-hidden">
                     <Button
                         buttonType={BUTTON_TYPE_CLASSES.base}
-                        onClick={() => console.log('boom')} // Handle Modal Preview for Featured Project
+                        onClick={() => handleProjectClick(content.id, 'featured')} // Handle Modal Preview for Featured Project
                     >Preview</Button>
                 </div>
                 <img src={content.image} alt="Project Image" className='h-[35vh] w-auto mask-l-from-50% mask-l-to-90% peer-hover:scale-110 transition-transform duration-500' />
@@ -21,8 +21,8 @@ const FeaturedProjectLeft = ({ content }) => {
             <div className={`relative z-10 max-w-5/10 ms-auto`}>
                 <h5 className='font-space-mono text-(--accent) text-sm text-end mr-4 mb-1'>Featured</h5>
                 <h4 className='text-2xl font-bold font-roboto-mono text-end mr-4 mb-2'>{content.projectName}</h4>
-                <div className='bg-(--muted) text-(--muted-foreground) py-3 px-4 hover:shadow-lg hover:shadow-(color:--primary) transition-shadow duration-300'>
-                    <p className='text-end mb-4 hover:shadow-sm'>{content.description}</p>
+                <div className='bg-(--muted) text-(--muted-foreground) py-3 px-4 hover:shadow-lg hover:shadow-(color:--primary) transition-shadow duration-500'>
+                    <p className='text-end mb-4 hover:shadow-sm'>{content.shortDescription}</p>
                     <div className='flex space-x-2 justify-end mr-4'>
                         {
                             content.techStack.map((item, i) => {

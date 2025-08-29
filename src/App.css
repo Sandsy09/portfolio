@@ -1,3 +1,44 @@
+/*-------- Sidebar style --------*/
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--primary-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 2px;
+  max-height: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+  border-radius: 2px;
+  min-height: 40px;
+}
+
+
+/* ------------- Text Highlight ------------- */
+
+
+::selection {
+  background: var(--primary);
+  color: var(--secondary-text);
+}
+
+::moz-selection {
+  background: var(--primary);
+  color: var(--secondary-text);
+}
+
+
 /*-------- Navigation Hamburger Styles --------*/
 
 .hamburger {

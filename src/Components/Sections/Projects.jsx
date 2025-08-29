@@ -1,36 +1,58 @@
-import React from 'react'
-import FeaturedProjectLeft from '../ui/FeaturedProjectLeft';
-import FeaturedProjectRight from '../ui/FeaturedProjectRight';
+import React, { useEffect, useState } from 'react'
 
-import ProjectImage from '/project-placeholder.jpg'
+import FeaturedList from '../ui/FeaturedProjects/FeaturedList';
+import Modal from '../ui/Modal';
 
-const content = {
-    image: ProjectImage,
-    techStack: [
-        'React',
-        'Tailwind',
-        'Node',
-        'Express'
-    ],
-    description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eaque odio voluptatibus illum perferendis. Cupiditate nihil alias, omnis temporibus cumque in, quas, unde commodi exercitationem eaque deleniti inventore minus. Ducimus?',
-    projectName: 'React Project',
-    gitLink: 'https://github.com/',
-    liveLink: 'https://youtube.com'
-}
+import { projectData } from '../../../config';
+import ProjectCard from '../ui/Projects/ProjectCard';
+import ProjectsList from '../ui/Projects/ProjectsList';
 
 const Projects = () => {
+
+    const [featuredProjects, setFeaturedProjects] = useState([]);
+    const [otherProjects, setOtherProjects] = useState([]);
+    const [projectModalOpen, setProjectModalOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState(null);
+
+    useEffect(() => {
+        const featuredProjects = projectData.filter((fp) => fp.featured === true);
+        const otherProjects = projectData.filter((fp) => fp.featured !== true);
+        setFeaturedProjects(featuredProjects);
+        setOtherProjects(otherProjects);
+    }, []);
+
+    const handleProjectClick = (projectId, projectList) => {
+        document.body.style.overflow = "hidden"
+        const projects = projectList === 'featured' ? featuredProjects : otherProjects;
+        const newSelectedProject = projects.filter((project) => project.id === projectId);
+        setProjectModalOpen(true);
+        setSelectedProject(newSelectedProject);
+    };
+
+    const handleModalClose = () => {
+        document.body.style.overflow = "unset"
+        setProjectModalOpen(false);
+        setSelectedProject(null);
+    };
+
     return (
-        <section id='projects' style={{minHeight:'100vh'}}>
-            <div className="container my-24 mx-auto py-12 lg:py-18 font-roboto">
-                <h3 className='font-roboto-mono tracking-widest font-medium text-(--foreground)/80 text-start text-4xl mb-8 lg:mb-10 pl-8 lg:pl-10'>Projects I&#39;ve Worked On</h3>
-                <div className="flex flex-col">
-                    <FeaturedProjectLeft content={content}/>
-                    <FeaturedProjectRight content={content}/> 
-                    <FeaturedProjectLeft content={content}/> 
+        <>
+            {projectModalOpen &&
+                <Modal
+                    project={selectedProject[0]}
+                    projectModalOpen={projectModalOpen}
+                    handleModalClose={handleModalClose}
+                />
+            }
+            <section id='projects' style={{ minHeight: '100vh' }}>
+                <div className="container my-24 mx-auto py-12 lg:py-18 font-roboto">
+                    <h3 className='font-roboto-mono tracking-widest font-medium text-(--foreground)/80 text-start text-4xl mb-8 lg:mb-10 pl-8 lg:pl-10'>Projects I&#39;ve Worked On</h3>
+                    <FeaturedList featuredProjects={featuredProjects} handleProjectClick={handleProjectClick}/>
+                    <ProjectsList projects={otherProjects}/>
                 </div>
-            </div>
-        </section>
-    )
+            </section>
+        </>
+    );
 };
 
 export default Projects;

@@ -3,4 +3,5 @@ export const BUTTON_TYPE_CLASSES = {
     ghost: "ghost",
     category: "category",
     job: "job",
+    danger: "danger",
 }
