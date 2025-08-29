@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 
 const ProjectsList = ({projects}) => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-[1100px] mx-auto">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-[1100px] mx-auto px-4 mt-12">
         {
             projects.map((project, i) => {
                 return (

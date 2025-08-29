@@ -4,7 +4,7 @@ import React from 'react'
 const ProjectCard = ({ project }) => {
     return (
         <a href={project.liveLink}>
-            <div className='flex container bg-(--muted)/60 text-(--muted-foreground) rounded-sm font-roboto p-5 min-h-[300px] hover:-translate-y-[15px] hover:-translate-x-[15px] hover:shadow-[15px_15px_0px_-3px_var(--primary)] transition-all duration-300'>
+            <div className='flex container bg-(--muted)/60 text-(--muted-foreground) rounded-sm font-roboto p-5 min-h-[300px] max-w-[380px] mx-auto hover:-translate-y-[15px] hover:-translate-x-[15px] hover:shadow-[15px_15px_0px_-3px_var(--primary)] transition-all duration-300'>
                 <div className="flex flex-col relative container min-h-[90%]">
                     <h1 className='text-start text-xl text-(--primary) font-roboto-mono mt-12 ml-4'>{project.projectName}</h1>
                     <p className='ml-4 mt-5 text-start max-w-[85%]'>
